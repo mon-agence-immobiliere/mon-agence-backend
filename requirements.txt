@@ -1,0 +1,13 @@
+Flask
+Flask-SQLAlchemy
+Flask-Babel==2.0.0
+Flask-Mail
+Flask-WTF
+Flask-Uploads
+WTForms
+email-validator
+stripe
+flask_migrate
+gunicorn
+flask_login
+flask_cors

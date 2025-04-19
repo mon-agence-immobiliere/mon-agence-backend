@@ -1,0 +1,18 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-brand strong {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

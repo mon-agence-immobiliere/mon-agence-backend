@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de bord Agent</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Bonjour {{ user.nom }} !</h2>
+    <h4>Vos biens publiés :</h4>
+    <ul class="list-group">
+        {% for bien in biens %}
+            <li class="list-group-item">{{ bien.titre }} - {{ bien.prix }} €</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

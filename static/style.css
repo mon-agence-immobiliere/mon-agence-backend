@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input[type="text"], input[type="email"], textarea, select {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    font-size: 16px;
+}
+button {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #333;
+}
+.error { color: red; font-weight: bold; }
+.success { color: green; font-weight: bold; }
+.dark {
+    background-color: #111;
+    color: #eee;
+}
+.dark input, .dark textarea, .dark select {
+    background-color: #222;
+    color: white;
+    border: 1px solid #555;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bg-dark {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+.text-dark {
+    color: #212529 !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
