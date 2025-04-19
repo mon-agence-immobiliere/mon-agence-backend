@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, session, g
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, timedelta
-from models import db, Utilisateur
+from models import db, User
 import random
 import vonage
 
@@ -59,9 +59,9 @@ def create_app():
             if code == session.get('otp_code'):
                 telephone = session.get('telephone')
                 nom = session.get('nom')
-                agent = Utilisateur.query.filter_by(telephone=telephone).first()
+                agent = User.query.filter_by(telephone=telephone).first()
                 if not agent:
-                    new_agent = Utilisateur(
+                    new_agent = User(
                         nom=nom,
                         telephone=telephone,
                         verified=True,
@@ -99,7 +99,7 @@ def create_app():
 
     @app.route("/verifier_acces/<telephone>")
     def verifier_acces(telephone):
-        agent = Utilisateur.query.filter_by(telephone=telephone).first()
+        agent = User.query.filter_by(telephone=telephone).first()
         if not agent:
             return jsonify({"acces": False, "message": "Numéro inconnu."})
         if agent.abonnement_valide:
