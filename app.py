@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, session, g
 from flask_sqlalchemy import SQLAlchemy
-from flask_babel import get_locale
 from datetime import datetime, timedelta
 from models import db, Utilisateur
 import random
@@ -19,9 +18,6 @@ def create_app():
     VONAGE_API_SECRET = 'I2cA0E0cSeiSaJHZ'
     VONAGE_BRAND_NAME = 'Mon Agence Immo'
 
-    @app.before_request
-    def before_request():
-        g.lang = str(get_locale())
 
     @app.route('/')
     def home():
